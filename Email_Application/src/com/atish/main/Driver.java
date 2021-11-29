@@ -10,7 +10,7 @@ public class Driver {
 	public static void main(String[] args) {
 		String firstName, lastName;
 		String generatedEmail;
-		String generatedPassword="";
+		String generatedPassword = "";
 		CredentialService cs = new CredentialService();
 
 		System.out.println("Enter employee first name and last name");
@@ -34,26 +34,26 @@ public class Driver {
 		case 1:
 			generatedEmail = cs.generateEmailAddress(emp.getfirstName().toLowerCase(), emp.getlastName().toLowerCase(),
 					"tech");
-			generatedPassword = cs.generateNewPassword();
+			generatedPassword = cs.generatePassword();
 			cs.showCredentials(emp, generatedEmail, generatedPassword);
 			break;
 		case 2:
 			generatedEmail = cs.generateEmailAddress(emp.getfirstName().toLowerCase(), emp.getlastName().toLowerCase(),
 					"ad");
-			generatedPassword = cs.generateNewPassword();
+			generatedPassword = cs.generatePassword();
 			cs.showCredentials(emp, generatedEmail, generatedPassword);
 			break;
 		case 3:
 			generatedEmail = cs.generateEmailAddress(emp.getfirstName().toLowerCase(), emp.getlastName().toLowerCase(),
 					"hr");
-			generatedPassword = cs.generateNewPassword();
+			generatedPassword = cs.generatePassword();
 			cs.showCredentials(emp, generatedEmail, generatedPassword);
 			break;
 		case 4:
 			generatedEmail = cs.generateEmailAddress(emp.getfirstName().toLowerCase(), emp.getlastName().toLowerCase(),
 					"leg");
-			generatedPassword = cs.generateNewPassword();
-		
+			generatedPassword = cs.generatePassword();
+
 			cs.showCredentials(emp, generatedEmail, generatedPassword);
 			break;
 		default:

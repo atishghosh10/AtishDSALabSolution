@@ -6,23 +6,16 @@ import java.util.Scanner;
 import com.atish.model.Employee;
 
 public class CredentialService {
-//	String email, password;
-//	Employee emp = new Employee(email, password);
-//	public Object showCredentials;
 
-	public String generateNewPassword() {
+	public String generatePassword() {
 
 		String data = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*_=+-/.?<>");
-
 		Random random = new Random();
-		char[] password = new char[8];
+		String password = "";
 		for (int i = 0; i < 8; i++) {
-//			password[i] = data.charAt(random.nextInt(data.length()));
-			password[i] = 'a';
-
+			password = password + data.charAt(random.nextInt(data.length()));
 		}
-		System.out.println(password);
-		return password.toString() ;
+		return password.toString();
 	}
 
 	public String generateEmailAddress(String firstName, String lastName, String department) {
@@ -31,14 +24,10 @@ public class CredentialService {
 
 	}
 
-	
-
-	public void showCredentials(Employee emp2, String generatedEmail, String Password) {
+	public void showCredentials(Employee emp2, String generatedEmail, String password) {
 		System.out.println("Dear " + emp2.getfirstName() + " your generated credentials are as follows");
-		System.out.println("Email --" + generatedEmail);
-		System.out.print("Password --" + Password.toString());
-//		System.out.print("Password --" + "abc");
-
+		System.out.println("Email  --->" + generatedEmail);
+		System.out.print("Password ---> " + password.toString());
 
 	}
 
